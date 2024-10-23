@@ -7,14 +7,14 @@ function confirmaRegistre(){
 
 async function carregaMencions(){
     var tagGraus = document.getElementById("graus");
-    var resposta = await fetch("COMPLETA!!!/mencions.php?grau="+tagGraus.value);
+    var resposta = await fetch("mencions.php?grau="+tagGraus.value);
     var respostaTxt = await resposta.text();
     document.getElementById("mencions").innerHTML = respostaTxt;
 }
 
 $(document).ready(function(){
     $("#graus").change(function(){
-        $.ajax({url: "mencions.php?grau=" + $("#graus").val(), success:
+        $.ajax({url: "controladors/mencions.php?grau=" + $("#graus").val(), success:
         function(result){
             $("#mencions").html(result);
         }});
