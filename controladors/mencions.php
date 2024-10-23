@@ -1,6 +1,6 @@
 <?php
-  include_once __DIR__ . "/../models/connectaBD.php";
-  include_once __DIR__ . "/../models/consultaMencions.php";
+  include_once __DIR__ . "./../models/connectaBD.php";
+  include_once __DIR__ . "./../models/consultaMencions.php";
 
   $connexio = connectaBD();
   //ternary operator
@@ -10,5 +10,5 @@
   $resultat_mencions = consultaMencions($connexio, $grau);
   pg_close($connexio);
 
-  include_once __DIR__ . "/../vistes/opcionsMencions.php";
+  include_once __DIR__ . "./../vistes/opcionsMencions.php";
 ?>

@@ -31,7 +31,7 @@ docker run -d --name tdiw-php --network="host" -v "$PWD":/var/www/html apache-ph
 docker run --name tdiw-db -p 5432:5432 -e POSTGRES_USER=david -e POSTGRES_DB=myDB -e POSTGRES_PASSWORD=password -d postgres
 
 # Wait 5 seconds for DB to be ready
-sleep 5
+sleep 10
 
 export PGPASSWORD=password
 
